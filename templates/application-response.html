@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Ubermelon Job Application Confirmation{% endblock %}
+
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="col-xs-12">
+      <div class="row">
+         <h3>Ubermelon Job Application Confirmation</h3><br>
+      </div>
+      <div class="row">
+        <p class="explanatory_text">
+        Thank you, {{ first_name }} {{ last_name }}, for applying to be a {{ job_title }}. Your minimum salary requirement is {{ "${:,}".format(salary) }}.
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

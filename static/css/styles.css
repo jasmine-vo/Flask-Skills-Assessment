@@ -1,0 +1,22 @@
+
+/* Changes background color of all form input boxes to yellow */
+input {
+    background-color: lightyellow;
+}
+
+/* Changes the text in the last name field to bold. Another way is to use <b></b> */
+.last_name {
+    font-weight: bold
+}
+
+/* Adds border around the instruction text */
+.explanatory_text {
+    border: 1px solid red;
+    background-color: honeydew;
+    padding: 10px;
+}
+
+/* Adds spacing between rows in container */
+#field {
+    margin: 0px 0px 15px 0px
+}

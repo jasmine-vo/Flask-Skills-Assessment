@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Application Form{% endblock %}
+
+
+{% block content %}
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Ubermelon Application Form</h3><br>
+
+        <p class="explanatory_text">
+          Thank you for your interest in working for Ubermelon! Please fill out the following required fields to begin your application.
+        </p><br>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <!-- Beginning of form -->
+    <form action="/application-success" method="post">
+
+      <div class="row" id="field">
+        First Name <input type="text" name="first_name" required>
+      </div>
+
+      <div class="row" id="field">
+        <span class="last_name">Last Name</span> <input type="text" name="last_name" required>
+      </div>
+
+      <div class="row" id="field">
+        Salary Requirement $ <input type="number" step="0.01" name="req_salary" min="0" required>
+      </div>
+
+      <div class="row" id="field">
+        Job Applying For 
+        <select name="job_title">
+        {% for job_title in jobs %}
+          <option value="{{ job_title }}">
+            {{ job_title }}</option>
+        {% endfor %}
+        </select>
+      </div>
+
+      <div class="row" id="field">
+        <input type="submit">
+      </div>
+
+    </form>
+    <!-- End of form -->
+  </div>
+{% endblock %}
